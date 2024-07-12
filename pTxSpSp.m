@@ -3,6 +3,7 @@
 % Created and edited by Xiaoping, 7/12/2024
 
 close all; clearvars
+addpath(fullfile('.','src'));
 %% prep
 load calibrationMS.mat    % load in ptx calibration 
 nslices= size(b0mapMS,3);
@@ -26,7 +27,7 @@ dt=10e-6;
 %figure, myimagesc(targ,mask), caxis([0 1]) %,daspect([1 0.688 1])
 %save targ targ targ0
 
-%load targ
+load targ
 
 %%
 myrf=load('rfpat_subpulse.mat');
